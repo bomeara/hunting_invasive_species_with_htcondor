@@ -6,6 +6,7 @@ processing to a computer cluster.
 The examples include:
 
   - _QuickStart_, which is HTCondor's quick start example for Windows.
+  - _QuickStartLinux_, which is HTCondor's quick start example for Linux.
   - _LearnR_, which is a very simple R example if R is installed on
     the local Widnows machine.
   - _R-Rtools-sandbox_, which demonstrates how to sandbox R and Rtools
@@ -14,7 +15,9 @@ The examples include:
     snow parallel package on Linux.
   - _RStanExample_, which demonstrates how to use RStan on HTCondor on
     Windows where R is locally installed.
-	
+  - _DockerExamples_, which demonstrates how to use Docker (these
+    examples build up knowledge necessary to use Docker with
+    HTCondor). These are Linux based examples.
 
 The "sandbox" examples do not require R to be installed on the
 machines in the HTCondor flock. Conversely, the "sandboxed" examples
