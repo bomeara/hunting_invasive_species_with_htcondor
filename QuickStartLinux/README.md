@@ -10,4 +10,4 @@ the `queue' has been increased.
 I would recommend you code this yourself rather than coping my
 example if you are teaching yourself HTCondor. 
 That way, you will understand it better.
-I included this example because I used it to debug the my Condor pool.
+I included this example because I used it to debug my Condor pool.
