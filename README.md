@@ -26,13 +26,15 @@ The examples include:
   - _HTCondorDockerSimple_, which demonstrates how to run a simple
     Python job using Docker. This example requires a Linux pool with
     Docker installed.
+  - _R_, which is an example developed by Luke Winslow. It uses R on a
+    Linux pool (with R installed) to analyze lake data.
 
 The "sandbox" examples do not require R to be installed on the
 machines in the HTCondor flock. Conversely, the "sandboxed" examples
 are stand alone and do not require the local installation of R.
 
-Some examples are written for Windows. 
-Others are written for Linux. 
+Some examples are written for Windows.
+Others are written for Linux.
 The biggest difference is that the Windows examples have
 [batch](https://en.wikipedia.org/wiki/Batch_file) files that end with
 `.bat`  whereas Linux
@@ -42,14 +44,14 @@ with `.sh`.
 Additionally, the Docker examples will not run on a Windows Flock.
 
 These examples may eventually be expanded to include more of a
-"tutorial" format rather than only examples. 
+"tutorial" format rather than only examples.
 
 # Suggested course of self study
 
 These examples assume fluency in the subject area programming languages
 (e.g., Python, R), operating scripting languages (e.g., writing
 Windows batch files, or Linux shell files), and Docker (for the Docker
-examples). 
+examples).
 
 Here is a suggested course of study:
 
@@ -69,7 +71,7 @@ Here is a suggested course of study:
    R. Depending upon your Condor pool's software, you may need to do
    this step with Docker.
 5. Learn how to use Docker Universe or another method to Sandbox your code.
-   
+
 # Tips for adapting code to run with HTCondor
 
 Here is an outline for adapting your code to run with HTCondor:
@@ -79,13 +81,13 @@ Here is an outline for adapting your code to run with HTCondor:
    improve your code and run the tasks locally on your desktop?)
 1. Understand your problem/code well enough to break it up into small
    parts that can run on HTCondor. Test run this code on small parts
-   of your data. 
+   of your data.
 2. Generate code to split your data/problem into small parts (if this
    step requires a lot of work, you may want to use HTCondor for this
-   step as well!). 
+   step as well!).
 3. Run make sure a test case for HTCondor works. Start small. Rather
    than run 10,000 jobs, start small. Run 1 job then 10 etc.
-4. Write code to tie together your results. 
+4. Write code to tie together your results.
 
 # Background, contact information, and acknowledgments
 
@@ -101,6 +103,6 @@ Mike Fienen, Joel Putman, the HTCondor Official documentation, and other
 provided some of the basic examples.
 
 Last, the author is thankful for the USGS CDI for funding that allowed
-him the opportunity to write-up this documentation. 
+him the opportunity to write-up this documentation.
 
 
