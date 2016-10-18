@@ -32,6 +32,8 @@ The examples include:
     and RTools on a Windows Machine.
   - _R-snow_, which is an example of using Condor to deploy jobs that
     run on parallel on the local machines.
+  - _RStanExamples_, which is an example of using R Stan on Windows
+    with HTCondor. It is a sandbox example. 
 
 The "sandbox" examples do not require R to be installed on the
 machines in the HTCondor flock. Conversely, the "sandboxed" examples
