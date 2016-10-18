@@ -28,6 +28,10 @@ The examples include:
     Docker installed.
   - _R_, which is an example developed by Luke Winslow. It uses R on a
     Linux pool (with R installed) to analyze lake data.
+  - _R-Rtools-sandbox_, which is an example of using a sandboxed version of R
+    and RTools on a Windows Machine.
+  - _R-snow_, which is an example of using Condor to deploy jobs that
+    run on parallel on the local machines.
 
 The "sandbox" examples do not require R to be installed on the
 machines in the HTCondor flock. Conversely, the "sandboxed" examples
