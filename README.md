@@ -93,9 +93,12 @@ These examples were compiled by Richard Erickson (rerickson@usgs.gov).
 Please contact him with Feedback on the example or feel free to "push"
 other examples to him and he will include them on this repository or
 include a link to your repository.
-He developed them while teaching himself Condor.
+
+He gathered and developed them while teaching himself Condor.
+Luke Winslow developed some of the example that are standalone.
+I only had to add some comments and documentation to Luke's examples.
 Mike Fienen, Joel Putman, the HTCondor Official documentation, and other
-provided some of the basic examples he adapted.
+provided some of the basic examples.
 
 Last, the author is thankful for the USGS CDI for funding that allowed
 him the opportunity to write-up this documentation. 
