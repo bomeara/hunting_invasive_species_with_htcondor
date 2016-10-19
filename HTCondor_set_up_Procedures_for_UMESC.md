@@ -1,14 +1,14 @@
-#HTCondor set up Procedures for UMESC
+# HTCondor set up Procedures for UMESC
 
 Here at the UMESC we are using Red Hat enterprise 7.2 Linux to run our HTCondor pool. It would be
 good to have someone accustomed to working with Linux to setup and Administer HTCondor on a
 Linux pool.
 
-##Linux considerations
+## Linux considerations
 Make sure the “hosts” file on all pool machines reflect what is in the pool. Open port 9618 for 
 Condor traffic.
 
-##Installation
+## Installation
 Decide on version of Condor you want to use. We have installed the stable version 8.4.8 on our
 production pool as of the writing of this article. When making references to the HTCondor manual we
 will be referring to 8.4.8. The manual can be downloaded here:
@@ -25,7 +25,7 @@ Once you have installed HTCondor you will want to look at the below roles of eac
 understand what types of machines (hardware) is needed to do what. You will need to choose what
 machine you want to be your CM (Central Manager), Execute, and Submit machines.
 
-##Machine Roles
+## Machine Roles
 There are 3 standard role types for machines in a Condor pool. One machine can be setup to run all
 three roles or each role can be on different machines. The following is an overview of what each 
 role is.
@@ -43,7 +43,7 @@ __Submit:__ Any machine in the pool, including the CM, can be configured as to w
 allow HTCondor jobs to be submitted. The resource requirements for a submit machine are actually
 much greater than the resource requirements for an execute machine.
 
-##HTCondor Daemons and Config files
+## HTCondor Daemons and Config files
 Each role above will need certain daemons (services) running to be able to perform that role. The
 following is a list of daemons we have running on our pool at the UMESC. These daemons are only
 started if defined in a config file under ```/etc/condor/config.d```. We created new config files for
