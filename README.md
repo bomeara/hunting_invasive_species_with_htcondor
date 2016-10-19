@@ -34,6 +34,8 @@ The examples include:
     run on parallel on the local machines.
   - _RStanExamples_, which is an example of using R Stan on Windows
     with HTCondor. It is a sandbox example. 
+  - _DockerImages_, which discusses how to get images to nodes on the
+    Condor flock.
 
 The "sandbox" examples do not require R to be installed on the
 machines in the HTCondor flock. Conversely, the "sandboxed" examples
