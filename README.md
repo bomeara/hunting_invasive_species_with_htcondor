@@ -110,7 +110,9 @@ I only had to add some comments and documentation to Luke's examples.
 Mike Fienen, Joel Putman, the HTCondor Official documentation, and other
 provided some of the basic examples.
 
-Last, the author is thankful for the USGS CDI for funding that allowed
+Additional content was added by S. Grace McCalla and Mike Fienen.
+
+Last, the authors are thankful for the USGS CDI for funding that allowed
 him the opportunity to write-up this documentation.
 
 
