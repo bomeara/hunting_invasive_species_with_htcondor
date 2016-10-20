@@ -6,7 +6,8 @@ processing with cluster computing.
 These examples assume that one has a functioning HTCondor pool with
 the appropriate software installed and configured (e.g., Docker for
 the Docker examples; R or Python for R or Python examples).
-Installing these programs is beyond the scope of these examples.
+Installing these programs is beyond the scope of these examples,
+however, we do include the setups we used to setup a condor pool in the `HTCondor_setup_Procedures_for_UMESC` file.
 
 The examples include:
 
@@ -111,6 +112,8 @@ Mike Fienen, Joel Putman, the HTCondor Official documentation, and other
 provided some of the basic examples.
 
 Additional content was added by S. Grace McCalla and Mike Fienen.
+
+Jon Knudson created the `HTCondor_setup_Procedures_for_UMESC` file.
 
 Last, the authors are thankful for the USGS CDI for funding that allowed
 him the opportunity to write-up this documentation.
