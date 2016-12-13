@@ -1,0 +1,12 @@
+universe	= docker
+docker_image	= r-base
+executable	= ./test.sh
+transfer_input_files	= test.sh, test.R
+log	= output/log$(Process).txt
+error	= output/err$(Process).txt
+output	= output/out$(Process).txt
+transfer_output_files   = TEST.csv
+transfer_output_remaps  = "TEST.csv = output/out$(Process).csv"
+should_transfer_files	= Yes
+when_to_transfer_output	= ON_EXIT_OR_EVICT
+queue 10
