@@ -57,7 +57,7 @@ to commit to an existing Dockerfile:
 	     q()
 	 
  - Exit the Docker image (with `exit`)
- - Commit the image (Note that the container ID number (e.g.,
+ - Commit the image. Note that the container ID number (e.g.,
    `674cff43dbfd`) needs to be changed by the user. 
 
 	     docker commit -m "Added in MARSS" -a "Richard Erickson" \
