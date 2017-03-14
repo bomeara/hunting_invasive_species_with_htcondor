@@ -1,14 +1,18 @@
-## This is a non-working docker file
 # our R base image
 FROM r-base
+
 # install MARSS packages
+# first, we create a script files and then we run the script file.
 RUN echo 'install.packages(c("MARSS"), repos="http://cran.us.r-project.org", dependencies=TRUE)' > /tmp/packages.R \
-&& Rscript /tmp/packages.R
+    && Rscript /tmp/packages.R
+
 # create an R user
 ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
-&& chown -R user:user $HOME
+    && chown -R user:user $HOME
+
 WORKDIR $HOME
 USER user
+
 # set the command
 CMD ["R"]
