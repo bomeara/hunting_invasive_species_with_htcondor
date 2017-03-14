@@ -71,30 +71,43 @@ to commit to an existing Dockerfile:
 
 We may also build an image from a Dockerfile. This methods is
  preferred because it is reproducible. 
- However, it is difficult and I have not been able to reproduce it.
- I tried to Jessie
- Frazelle's Block [post](https://blog.jessfraz.com/post/r-containers-for-data-science/)
- on the topic to be helpful, but have not been able to replicate it
- yet.
- Here is my best try:
+ I initially tried to Jessie
+ Frazelle's Blog
+ [post](https://blog.jessfraz.com/post/r-containers-for-data-science/),
+ but got confused because I did not understand Docker well and had
+ other local machine problems.
+ However, I found a longer
+ [tutorial on howtoforge.com](https://www.howtoforge.com/tutorial/how-to-create-docker-images-with-dockerfile/)
+ that helped me understand Frazelle's example.
+ I was able to adapt her example for the MARSS package (note that this
+ package takes a _long_ time to build.
+ 
+ **My problem ended up being that I did not have tabs correct on new
+    lines. I would suggest using my Dockerfile rather than messing
+    with copying and pasting.** 
+ 
  
  - We need a docker file with this information (this is placed in an
    Dockerfile, but my example doesn't yet work):
 
         # our R base image
-	
-	    FROM r-base
-	    # install MARSS packages
-	    RUN echo 'install.packages(c("MARSS"), repos="http://cran.us.r-project.org", dependencies=TRUE)' > /tmp/packages.R \
-	    && Rscript /tmp/packages.R
+        FROM r-base
+    
+        # install MARSS packages
+        # first, we create a script files and then we run the script file.
+        RUN echo 'install.packages(c("MARSS"), repos="http://cran.us.r-project.org", dependencies=TRUE)' > /tmp/packages.R \
+    		&& Rscript /tmp/packages.R
+    
         # create an R user
-		ENV HOME /home/user
-	    RUN useradd --create-home --home-dir $HOME user \
-	    && chown -R user:user $HOME
-	    WORKDIR $HOME
-	    USER user
-	    # set the command
-	    CMD ["R"]
+        ENV HOME /home/user
+        RUN useradd --create-home --home-dir $HOME user \
+			&& chown -R user:user $HOME
+
+        WORKDIR $HOME
+        USER user
+    
+        # set the command
+        CMD ["R"]
 
  - We then build the image (make sure to include the period at the
      end).
