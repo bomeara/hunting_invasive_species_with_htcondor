@@ -42,7 +42,9 @@ debug if it does not work for some reason.
 4. Repeat previous step using HTCondor
 
    - Simulate data
-   - Get Docker images over to machines in HTCondor Pool
+   - Get Docker images over to machines in HTCondor Pool (see
+     [this tutorial](https://my.usgs.gov/bitbucket/projects/CDI/repos/hunting_invasive_species_with_htcondor/browse/DockerImages/README.md#21)
+     for help).
    - condor submit
    - view results
 
