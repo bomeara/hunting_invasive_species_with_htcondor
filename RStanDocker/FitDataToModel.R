@@ -25,4 +25,4 @@ outToSave <- data.frame(summary(out)$summary)
 outToSave$ParameterNames <- rownames(outToSave)
 outToSave$Index <- n
 
-write.csv(x = outToSave, file = "out.csv")
+write.csv(x = outToSave, file = "parEst.csv")

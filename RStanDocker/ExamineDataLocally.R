@@ -5,7 +5,6 @@ library(data.table) # used for manhandling data
 ## Read in original data
 d <- fread("simulatedData.csv")
 ## Summarize to get parameter values
-
 parValues <- d[ , list(intercept = mean(KnownIntercept),
                        slope = mean(KnownSlope),
                        stdDev = mean(stdDev)), by = Index]
