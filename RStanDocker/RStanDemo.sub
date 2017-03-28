@@ -1,0 +1,17 @@
+universe	= docker
+docker_image	= rerickson/r-stan
+executable	= ./example.sh
+arguments       = $(Process)
+transfer_input_files	= example.sh, FitDataToModel.R, simulatedData.csv, model.stan
+log	= output/log$(Process).txt
+error	= output/err$(Process).txt
+output	= output/out$(Process).txt
+request_memory = 3GB
+#requirements=(Machine == igsarfebaskoi00)
+transfer_output_files   = out.csv
+transfer_output_remaps  = "out.csv = dataOut/out$(Process).csv"
+should_transfer_files	= Yes
+when_to_transfer_output	= ON_EXIT_OR_EVICT
+accounting_group = group_AEH
+accounting_group_user =raerickson
+queue 100

@@ -9,7 +9,8 @@ d <- read.csv("simulatedData.csv")
 ## HTCondor iteration
 n <- as.numeric(commandArgs(trailingOnly = TRUE))
 ## HTCondor lives in zero-based index world, but R is in one-based world
-n <-n + 1
+## Next line makes sure it the answer is 1 or 2 
+n <-n %% 2 + 1
 print("n is")
 print(n)
 ## Format data for RStan
@@ -24,4 +25,4 @@ outToSave <- data.frame(summary(out)$summary)
 outToSave$ParameterNames <- rownames(outToSave)
 outToSave$Index <- n
 
-write.csv(x = outToSave, file = paste0("parEst_", n, ".csv"))
+write.csv(x = outToSave, file = "out.csv")
