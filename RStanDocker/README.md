@@ -6,9 +6,29 @@ It also contains files necessary to test the RStan, both locally and
 on a HTCondor pool.
 Note that the Docker image will need to be shared across the nodes.
 
+The example is generating simulating a linear regression and then
+recovering the parameters using RStan. 2 different models are
+generated, but the data can be fit multiple times using the query
+option in the submit file. This option was selected to allow for
+debugging and running large HTCondor jobs.
+
+The file paths will need to be updated in these examples files.
+Additionally, the output folders `output` and `dataOut` will need to
+be locally created. 
+
+Overall, this tutorial assumes a working understanding of Docker,
+HTCondor, R, and RStan. However, it is a worked example of how to use
+the four programs together.
+
+
 The specific files include:
 - `Dockerfile`: the Dockerfile necessary to build a docker image.
-- ``
+- `ExamineDataLocally.R`: An R file for examining the outputs.
+- `example.sh`: a shell file needed to run the R script.
+- `FitDataToModel.R`: The R code that runs RStan.
+- `model.stan`: The Stan model that gets run.
+- `RStanDemo.sub`: The HTCondor submit file.
+- `SimulateData.R`: The R file that generates the simulated data.
 
 
 Steps to use this example:
